@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+    stages {
+        stage('Check Server') {
+            steps {
+               git branch: 'main', url: 'https://github.com/swapnilraul/Jenkins-CICD-Practice.git'
+            }
+        }
+        stage('Inspect Source') {
+            steps {
+              sh '''
+              echo "Current directory:" 
+              pwd 
+              echo "repository files:"
+               ls -ls -la 
+              echo "Application script:"
+               cat app.sh
+
+              '''
+            }
+        }
+        stage('Build') {
+            steps {
+             sh '''
+             chmod +x app.sh 
+             ./app.sh
+
+             '''
+            }
+        }
+        stage('Test'){
+            steps{
+                sh '''
+
+                output=$(./app.sh)
+                echo "$output"
+                echo "$output" | grep -q "Application build successful"
+
+                echo "Automated test passed"
+
+                '''
+            }
+        }
+    }
+}
