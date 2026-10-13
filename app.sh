@@ -1,4 +1,5 @@
+#! /usr/bin/env bash 
+set -e 
 
-Hello from my jenkins CI/CD project
-
-Application build successfully
+echo "Hello from my jenkins CI/ CD project"
+echo "Application build successful"
