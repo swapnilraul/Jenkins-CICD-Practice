@@ -1,4 +1,4 @@
-#! /bin/bash 
+#! /bin/sh 
 set -e 
 
 echo "Hello from my jenkins CI/ CD project"
