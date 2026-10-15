@@ -3,5 +3,5 @@ Git integration, automated testing, and Docker builds.
 
 Making one change for automated trigger the pipeline 
 
-Now adding HTTP Server for testing
+Now adding HTTP Server for testing and practice
 
