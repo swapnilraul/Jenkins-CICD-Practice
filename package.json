@@ -1,0 +1,9 @@
+{
+  "name": "jenkins-cicd-practice",
+  "version": "1.0.0",
+  "description": "Node.js application for Jenkins CI/CD deployment practice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
